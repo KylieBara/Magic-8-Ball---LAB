@@ -18,13 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball3" translatesAutoresizingMaskIntoConstraints="NO" id="md3-PZ-jo0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ball3" translatesAutoresizingMaskIntoConstraints="NO" id="md3-PZ-jo0">
                                 <rect key="frame" x="67" y="222" width="240" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-3x-3jv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-3x-3jv">
                                 <rect key="frame" x="145" y="520" width="85" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="40"/>
                                 <state key="normal" title="Ask!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,15 +31,27 @@
                                     <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGX-iG-vDE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6e-Ei-Z1a">
-                                <rect key="frame" x="25" y="76" width="325" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6e-Ei-Z1a">
+                                <rect key="frame" x="25" y="121" width="325" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1fg-6O-ZoO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="md3-PZ-jo0" firstAttribute="top" secondItem="I6e-Ei-Z1a" secondAttribute="bottom" constant="51" id="3BU-T3-5ri"/>
+                            <constraint firstItem="md3-PZ-jo0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5xB-1S-utz"/>
+                            <constraint firstItem="md3-PZ-jo0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="OJw-5f-nq1"/>
+                            <constraint firstItem="I6e-Ei-Z1a" firstAttribute="centerX" secondItem="md3-PZ-jo0" secondAttribute="centerX" id="P0A-Kl-3KH"/>
+                            <constraint firstItem="Gu3-3x-3jv" firstAttribute="top" secondItem="md3-PZ-jo0" secondAttribute="bottom" constant="75" id="cnx-tw-bYz"/>
+                            <constraint firstItem="md3-PZ-jo0" firstAttribute="centerX" secondItem="Gu3-3x-3jv" secondAttribute="centerX" id="du1-Zs-nEC"/>
+                            <constraint firstItem="md3-PZ-jo0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBN-RJ-dxi"/>
+                            <constraint firstItem="I6e-Ei-Z1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="z4M-uq-opF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
